@@ -1,0 +1,35 @@
+@font-face{
+    font-family: 'Source Serif Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSerifPro-Regular'),
+         local('Source Serif Pro'),
+         url('/fonts/OTF/SourceSerifPro-Regular.otf') format('opentype'),
+         url('/fonts/SVG/SourceSerifPro-Regular.svg#SourceSerifPro-Regular') format('svg');
+}
+
+@font-face{
+    font-family: 'Source Serif Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSerifPro-Semibold'),
+         local('Source Serif Pro Semibold'),
+         url('/fonts/OTF/SourceSerifPro-Semibold.otf') format('opentype'),
+         url('/fonts/SVG/SourceSerifPro-Semibold.svg#SourceSerifPro-Semibold') format('svg');
+}
+
+@font-face{
+    font-family: 'Source Serif Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSerifPro-Bold'),
+         local('Source Serif Pro Bold'),
+         url('/fonts/OTF/SourceSerifPro-Bold.otf') format('opentype'),
+         url('/fonts/SVG/SourceSerifPro-Bold.svg#SourceSerifPro-Bold') format('svg');
+}
+
+h1 {font-family: 'Source Sans Pro', sans-serif;}
+body {font-family: 'Source Serif Pro', serif;}
