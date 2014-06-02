@@ -28,13 +28,40 @@
          url('/fonts/SVG/SourceSerifPro-Bold.svg#SourceSerifPro-Bold') format('svg');
 }
 
-h1, h2, h3, h5, h6 {font-family: 'Source Sans Pro', sans-serif;}
+h1, h2, h3, h5, h6 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #009BC5;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.7 em;
+}
+
+h2 {
+    font-weight: 400;
+    font-size: 1.5 em;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 1.3 em;
+}
+
 
 body {
     font-family: 'Source Serif Pro', serif;
     width: 925px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0px;
+    margin-top: 0px;
+}
+
+a:link, a:visited {
+    color: #009BC5;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
 }
 
 .imagealignright {
@@ -47,4 +74,7 @@ body {
 }
 
 header {
+    padding: 0px;
+    margin-top: 0px;
 }
+
