@@ -30,7 +30,12 @@
 
 h1, h2, h3, h5, h6 {font-family: 'Source Sans Pro', sans-serif;}
 
-body {font-family: 'Source Serif Pro', serif;}
+body {
+    font-family: 'Source Serif Pro', serif;
+    width: 925px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .imagealignright {
     float: right;
@@ -41,3 +46,5 @@ body {font-family: 'Source Serif Pro', serif;}
     float: left;
 }
 
+header {
+}
