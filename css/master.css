@@ -28,7 +28,7 @@
          url('/fonts/SVG/SourceSerifPro-Bold.svg#SourceSerifPro-Bold') format('svg');
 }
 
-h1, h2, h3 {font-family: 'Source Sans Pro', sans-serif;}
+h1, h2, h3, h5, h6 {font-family: 'Source Sans Pro', sans-serif;}
 
 body {font-family: 'Source Serif Pro', serif;}
 
@@ -38,4 +38,22 @@ body {font-family: 'Source Serif Pro', serif;}
 
 .imagealignleft {
     float: left;
+}
+
+aside {
+  float: left;
+  width: 200px;
+  left: 0px;   
+  margin: 0px;
+  padding: 0px;
+}
+
+article {
+  width: 725px;
+  left: 200px;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer {
 }

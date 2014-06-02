@@ -2,14 +2,16 @@
 layout: master
 title: Colloid Physics on the International Space Station
 ---
+{% include header.html %}
 
-<div id="home">
+<article>
   <h1>BCAT and ACE: Colloid Physics in Space</h1>
   <ul class="posts">
     {% for post in site.posts %}
       <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
-</div> 
+</article> 
+
 {% include footer.html %}
 
