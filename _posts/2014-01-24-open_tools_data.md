@@ -7,6 +7,8 @@ title: Open data, open access, open tools
 
 # Opening up the process of science
 
+A new way to do science.
+
 ## Open code and data
 
 ## Open blog history
