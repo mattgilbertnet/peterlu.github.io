@@ -5,7 +5,7 @@ date: 2014-06-04 0:13:00 UTC
 title: ACE-M2 starting operations
 ---
 
-# First morning of operations
+# First day of operations
 
 We have commenced the first image acquisition in the light microscopy module (LMM) as part of the ACE-M2 experiment. The LMM system is being controlled directly by the Payload Developer (PD), Lou Chesney, sitting at the bank of computer screens that run the control software:
 
@@ -15,11 +15,8 @@ Because the microscope is onboard the International Space Station, the communica
 
 ![James Birchenough](/images/2014_06_04/140604_ace_tsc_birchenough_james_web.jpg)
 
-We have 15 samples in the holder in this set of experiments, and the first order of business to examine each of the 15. 
+After a full 8-hour shift, Lou and James swapped positions with Tibor Lorik (PD) and Amber Krauss (RO / DMO):
 
-
-
-
-
+![Tibor Lorik and Amber Krauss](/images/2014_06_04/140604_ace_tsc_tibor_amber_web.jpg)
 
 
