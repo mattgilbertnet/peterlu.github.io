@@ -43,11 +43,48 @@ So by a bit of trial an error, I found the rough dye concentration corresponding
 
 Here's the final list of samples we submitted to ZIN / NASA (Fedexed them earlier this week):
 
-| sample name | dye concentration (mg/L) |
-| ----------- | -----------------------: |
-| plu_M3A | 1.05 |
-| plu_M3B | 7.36 |
-| plu_M3C | 13.7 |
-| plu_M3D | 20.0 |
-| plu_M3E | 26.3 |
+Sample        |   Dye concentration (mg/L) 
+:-----------: | :-------------------------: 
+plu_M3A       | 1.05 
+plu_M3B       | 7.36 
+plu_M3C       | 13.7 
+plu_M3D       | 20.0 
+plu_M3E       | 26.3 
 
+# Testing linearity
+
+![Absorption vs. concentration](/images/2014_06_17/dye_concs_abs_140617.png){: .imagealignright}To check the linearity of the fluorescence intensity, I measured the height (absorbance) of each peak at 554 nm, and plotted it as a function of concentration (from the sample preparation). There are several ways to measure the peak: reading off the top value, or averaging over a few nm around the maximum. In all cases, the points fall on top of each other, as seen in the figure at right, where the different ways of measuring peak height are indistinguishable. And, critically, the points all fall along a straight line (purple in the figure), which extrapolates to very close to the origin. These data show very carefully that the relationship between absorbance---and therefore fluorescence---is linear with dye concentration, which have similar spectral characteristics to the colloidal particles we have launched.
+
+This is exactly as we would hope for a good set of standard samples, to use to then explore and calibrate the imaging system properly, using a different chemistry while still in the same physical realm (in terms of fluorescence intensity) that we are interested in for our colloidal samples. So we are very excited to launch these as a part of the ACE-M3 experiment!
+
+Finally, here is the code from the second plot, with the linear fit to the [raw data](/images/2014_06_17/peak_summary_130615.txt):
+
+```Python
+from pylab import *
+import csv
+import prettyplotlib as ppl
+
+dye_concs_data = []
+for row1 in csv.reader(open('peak_summary_130615.txt'), delimiter='\t'): 
+    dye_concs_data.append(row1)
+header1 = dye_concs_data[0]
+water_blank = dye_concs_data[1]
+values1 = array(dye_concs_data[2:]).astype(np.float)
+concs=values1[:,0]
+window5nm = values1[:,2]
+linfit = polyfit(concs, window5nm, 1)
+fitrange =[0,30]
+
+figure(figsize=(6,4))
+for i in range (1,4):
+    ppl.plot(concs,values1[:,i],'o')
+ppl.plot(fitrange,polyval(linfit,fitrange),'-')
+xlabel('concentration [mg/L]')
+ylabel('absorbance')
+title('Dye concentration-dependent absorption\n Peter J. Lu, 17 Jun 2014')
+xlim([0,30])
+ylim([0,2.5])
+lg= legend(['peak max','2 nm window','5 nm window'],'upper left')
+lg.draw_frame(False)
+savefig('dye_concs_abs_140617.pdf')
+```
