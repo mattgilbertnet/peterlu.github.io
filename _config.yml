@@ -2,11 +2,8 @@ markdown: kramdown
 
 kramdown:
   input: GFM
-  use_coderay: true
 
-coderay:
-    coderay_wrap: div
-    coderay_line_numbers: nil
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
+syntax-highlighting:
+  enabled : true
+  css: syntax.css
+
