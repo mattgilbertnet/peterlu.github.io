@@ -41,15 +41,15 @@ So by a bit of trial an error, I found the rough dye concentration corresponding
 
 ## Samples to be launched
 
-Here's the final list of samples we submitted to ZIN / NASA (Fedexed them earlier this week):
+Here's the final list of samples we submitted to ZIN / NASA:
 
-Sample        |   Dye concentration (mg/L) 
-:-----------: | :-------------------------: 
-plu_M3A       | 1.05 
-plu_M3B       | 7.36 
-plu_M3C       | 13.7 
-plu_M3D       | 20.0 
-plu_M3E       | 26.3 
+Sample | Dye concentration
+:---:|:---: 
+plu_M3A | 1.05 mg/L
+plu_M3B | 7.36 mg/L 
+plu_M3C | 13.7 mg/L 
+plu_M3D | 20.0 mg/L 
+plu_M3E | 26.3 mg/L 
 
 # Testing linearity
 
@@ -59,7 +59,7 @@ This is exactly as we would hope for a good set of standard samples, to use to t
 
 Finally, here is the code from the second plot, with the linear fit to the [raw data](/images/2014_06_17/peak_summary_130615.txt):
 
-```Python
+~~~python
 from pylab import *
 import csv
 import prettyplotlib as ppl
@@ -87,4 +87,5 @@ ylim([0,2.5])
 lg= legend(['peak max','2 nm window','5 nm window'],'upper left')
 lg.draw_frame(False)
 savefig('dye_concs_abs_140617.pdf')
-```
+~~~
+

@@ -73,8 +73,28 @@ a:link, a:visited {
     float: left;
 }
 
-header {
-    padding: 0px;
-    margin-top: 0px;
+article {
+    margin: 0px;
 }
 
+table {
+   border-spacing: 3px 3px;
+   margin: auto;
+}
+
+td {
+   background-color: #f4f4f4;
+   padding: 7px 25px 7px 25px;
+
+}
+
+th {
+   color: white;
+   padding: 10px 25px 10px 25px;
+   background-color: #303030;
+   background-color: #009BC5;
+}
+
+pre {
+   background-color: #f4f4f4;
+}
