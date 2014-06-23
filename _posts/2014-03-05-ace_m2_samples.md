@@ -61,5 +61,5 @@ Sample number | Sample name |  Colloid size | Colloid volume fraction | Polymer 
 :---: | :---: | :---: | :---: | :---: | :---: | :---:
 20 | plu_ACEM2_sm_ps | small | 15.0% | 0.529 mg/g  
 21 | plu_ACEM2_lg_ps | large | 20.5% | 0.153 mg/g
-22 | plu_ACEM2_sm_ps | small | 22.0% | 0.275 mg/g
+22 | plu_ACEM2_lg_gel | large | 22.0% | 0.275 mg/g
 
