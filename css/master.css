@@ -73,6 +73,12 @@ a:link, a:visited {
     float: left;
 }
 
+.imagealigncenter {
+    display: block;
+    margin: 0px auto;
+}
+
+
 article {
     margin: 0px;
 }
