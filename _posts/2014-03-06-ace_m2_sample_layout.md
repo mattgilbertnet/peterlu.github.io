@@ -31,6 +31,8 @@ Strip | Well 1 | Well 2 | Well 3 | Well 4 | Well 5
 **615** | ![](/images/ace_m2_sample_tiles/sample12.png) | ![](/images/ace_m2_sample_tiles/sample09.png) | ![](/images/ace_m2_sample_tiles/sample15.png) | ![](/images/ace_m2_sample_tiles/sample10.png) | ![](/images/ace_m2_sample_tiles/sample22.png)
 **621** | ![](/images/ace_m2_sample_tiles/sample01.png) | ![](/images/ace_m2_sample_tiles/sample07.png) | ![](/images/ace_m2_sample_tiles/sample08.png) | ![](/images/ace_m2_sample_tiles/sample15.png) | ![](/images/ace_m2_sample_tiles/sample20.png)
 
+![Sample platter 2104](/images/ace_m2_sample_tiles/platter_2104_web.png){: .imagealigncenter}
+
 # Platter 2105
 
 Strip | Well 1 | Well 2 | Well 3 | Well 4 | Well 5
@@ -38,3 +40,6 @@ Strip | Well 1 | Well 2 | Well 3 | Well 4 | Well 5
 **608** | ![](/images/ace_m2_sample_tiles/sample21.png) | ![](/images/ace_m2_sample_tiles/sample15.png) | ![](/images/ace_m2_sample_tiles/sample09.png) | ![](/images/ace_m2_sample_tiles/sample13.png) | ![](/images/ace_m2_sample_tiles/sample02.png)
 **618** | ![](/images/ace_m2_sample_tiles/sample05.png) | ![](/images/ace_m2_sample_tiles/sample18.png) | ![](/images/ace_m2_sample_tiles/sample12.png) | ![](/images/ace_m2_sample_tiles/sample22.png) | ![](/images/ace_m2_sample_tiles/sample21.png)
 **613** | ![](/images/ace_m2_sample_tiles/sample03.png) | ![](/images/ace_m2_sample_tiles/sample19.png) | ![](/images/ace_m2_sample_tiles/sample21.png) | ![](/images/ace_m2_sample_tiles/sample21.png) | ![](/images/ace_m2_sample_tiles/sample21.png)
+
+![Sample platter 2105](/images/ace_m2_sample_tiles/platter_2105_web.png){: .imagealigncenter}
+
