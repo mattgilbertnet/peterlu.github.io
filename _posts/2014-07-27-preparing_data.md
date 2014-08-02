@@ -9,9 +9,9 @@ title: Preparing images for analysis
 
 We think that the samples we are looking at in the current run (the fourth) on ISS with ACE-M2 are undergoing phase separation and gelation, based on ground studies and preliminary images from orbit. To understand how these samples evolve over time, we perform nominally the same procedure---collecting images from the same positions, magnifications, depths, at similar settings---each day we run the experiment. In principle, then the images from successive days should have the same (or at least very close) brightness and contrast, and should overlay on top of each other exactly. To see whether this is happening in practice, here is the raw sequence of 10x composite images of sample 22 (platter 2105, strip B618, well 4) taken on days 2, 3, 5, 8, 11 and 15:
 
-![10x composite, raw images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15_resize.gif){: .imagealigncenter}
+![10x composite, raw images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15_resize.gif)
 
-![](/images/ace_m2_sample_tiles/sample22.png){: .imagealigncenter}
+![](/images/ace_m2_sample_tiles/sample22.png)
 
 The position shifts slightly, and the brightness changes. Clearly, the images are not exactly aligned, and the motion distracts from being able to watch any evolution in the sample, as well as interfering with any automated analysis.
 
@@ -35,7 +35,7 @@ For color images, the Photoshop feature ```Match Color...``` is very good and ex
 
 In the ```Timeline``` palette, I ```Create Frame Animation```, then in the drop-down menu select ```Make Frames from Layers```. The great thing about this feature is that it otherwise doesn't affect anything about the image or its layers. The final step is to export to an animated ```.gif``` file, using the ```Save for Web...``` dialog box. There I reduce to final web resolution, and create the final file:
 
-![10x composite, aligned images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15.gif){: .imagealigncenter}
+![10x composite, aligned images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_10x_days02to15.gif)
 
 # Higher magnification
 
@@ -45,9 +45,9 @@ I apply the same procedure to the higher-magnification 40x composite. First, the
 
 And then the corrected version, where the aligned images have a mean of 128 and standard deviation of 40 8-bit grayscale levels:
 
-![40x composite, aligned images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15.gif){: .imagealigncenter}
+![40x composite, aligned images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15.gif)
 
-# Stage reprocibility or drift?
+# Stage reproducibility or drift?
 
 Several things are apparent from these sequences. First, the stage is not perfectly reproducible from a mechanical standpoint. The composites seem to move around a little bit, likely due to mechanical backlash in the stage. Second, intensities are not constant from day to day.
 

@@ -13,7 +13,7 @@ The main purpose of Run 4 for ACE-M2 is to observe the time evolution of phase s
 
 As we are standardizing on procedures, we first image the entire well with a 10x composite tiling at a depth of 80 microns, which for samples A1, C3, C4 and C5 are pretty much the same:
 
-![four similar phase-separating samples A1, C3, C4 and C5](/images/2014_07_14_ace_m2_run4/A1_C345_80uM_run4_web.png){: .imagealigncenter}
+![four similar phase-separating samples A1, C3, C4 and C5](/images/2014_07_14_ace_m2_run4/A1_C345_80uM_run4_web.png)
 
 The wells look mostly well-mixed, with a small amount of phase separation visible as the texture in the images develop. But the feature size of the separation is similar in all wells, so this is suggests we are being consistent in loading, mixing and imaging.
 
@@ -21,6 +21,6 @@ The wells look mostly well-mixed, with a small amount of phase separation visibl
 
 By contrast, sample B5 is completely different. There is some structure forming, which is at a much larger length scale: uniformly far more coarse, throughout the sample well. 
 
-![different-looking phase-separating sample B5](/images/2014_07_14_ace_m2_run4/B5_80uM_run4_web.png){: .imagealigncenter}
+![different-looking phase-separating sample B5](/images/2014_07_14_ace_m2_run4/B5_80uM_run4_web.png)
 
 This differs significantly from the other four wells, and there is no obvious scientific reason that we should expect this. Hopefully we will be able to resolve this mystery with more data as it is collected.

@@ -47,7 +47,6 @@ Sample number | Sample name | Colloid size | Colloid volume fraction
 11 | plu_ACEM2_lg_10p7 | large | 10.7% 
 12 | plu_ACEM2_lg_05p2 | large | 5.2% 
 13 | plu_ACEM2_lg_00p4 | large | 0.4% 
-|---
 14 | plu_ACEM2_sm_45p0 | small | 45.0% 
 15 | plu_ACEM2_sm_29p9 | small | 29.9% 
 16 | plu_ACEM2_sm_19p8 | small | 19.8% 
