@@ -41,7 +41,7 @@ In the ```Timeline``` palette, I ```Create Frame Animation```, then in the drop-
 
 I apply the same procedure to the higher-magnification 40x composite. First, the raw data (just resized):
 
-![40x composite, raw images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15_resize.gif){: .imagealigncenter}
+![40x composite, raw images](/images/2014_07_27_ace_m2_run4_s22_gel/w9s22_40x_60um_days04to15_resize.gif)
 
 And then the corrected version, where the aligned images have a mean of 128 and standard deviation of 40 8-bit grayscale levels:
 
