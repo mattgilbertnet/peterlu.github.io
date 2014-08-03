@@ -23,7 +23,7 @@ Most open-source tools are designed to work with Linux first and foremost, usual
 
 Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, easy to use, and widespread. Either bare-metal install or virtual machine (e.g. VirtualBox) is fine for this demo.
 
-1. Download `.iso` or `.usb` from http://www.linuxmint.com/download.php
+1. Download `.iso` or `.usb` from [www.linuxmint.com/download.php](http://www.linuxmint.com/download.php)
 2. Make bootable DVD / USB stick; in Linux, there is a program called `Startup Disk Creator`. 
 
 2. Run updates and restart.
@@ -32,15 +32,9 @@ Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, 
 
 In **Synaptic Package Manager** (`apt-get`), install packages:
 
-+ git
-+ pcmanfm
-+ alacarte
-
-_Optional packages that I find useful_ 
-
-+ nfs-common
-+ laptop-mode-tools
-+ powerstat
++ `git`
++ `pcmanfm`
++ `alacarte`
 
 ## LaTeX
 
@@ -50,7 +44,7 @@ Everyone should use LaTeX for all scientific and technical publications. It is t
 
 This is a large, modern, updated and full-featured distribution, with a great deal of flexibility. Although you can install it through Synaptic, for some reason the packages that Ubuntu releases are always way, way out of date. Instead:
 
-1. Download the latest from http://tug.org/texlive/
+1. Download the latest from [tug.org/texlive](http://tug.org/texlive/)
 2. Extract the archive, either using the desktop or command-line. 
 3. Run the installation script with root permissions:
 
@@ -79,7 +73,7 @@ The installer will download all of the packages you specify, so you must be onli
 
 Eclipse is a large software integrated development environment (IDE), open-sourced by IBM. Current version is Eclipse 4.4 "Luna". To install:
 
-1. download from http://eclipse.org/downloads/ 
+1. download from [eclipse.org](http://eclipse.org/downloads/) 
 2. extract archive, which places all files in single folder
 3. for convenience, move to a system directory
 
@@ -118,8 +112,8 @@ You will be prompted for a passphrase, the password that you will use to unlock 
 
 ### Add SSH key to bitbucket.org repository 
 
-1. login to https://www.bitbucket.org
-2. In upper right corner, drop down "manage account", SSH keys option on left: add text from id_rsa.pub
+1. login to [bitbucket.org](https://www.bitbucket.org)
+2. In upper right corner, drop down `manage account`, SSH keys option on left: add text from id_rsa.pub
 
 ## Working with Git, Eclipse and LaTeX
 
@@ -129,7 +123,7 @@ The first step is to clone a repository from the remote location to the local ma
 git clone git@bitbucket.org:peterjlu/aot_xl.git
 ````
 
-In Eclipse: file->import->general->existing projects into workspace
+In Eclipse: `file->import->general->existing projects into workspace`
 
 This will create a new project that Eclipse is aware has a remote git-repository. Eclipse has great integration with git, so that you can use either the command-line or the internal GUI-based tools, with the same results and no conflicts. 
 
@@ -141,11 +135,11 @@ git commit -m 'name of update'
 git push
 ```
 
-You will be prompted for the passphrase; once you enter it successfully, it automatically uploads and updates the remote repository. To confirm this, you can check online at http://www.bitbucket.org.
+You will be prompted for the passphrase; once you enter it successfully, it automatically uploads and updates the remote repository. To confirm this, you can check online at [bitbucket](http://www.bitbucket.org).
 
 ### Updating a git repository: inside Eclipse
 
-Right click on the project name in the _Project Explorer_, Team->commit. Enter the text that describes the update (the equivalent of the text entered with the command-line `git commit`), then press the "Commit and Push" button to do the commit and upload in one step.
+Right click on the project name in the `Project Explorer`, `Team->commit`. Enter the text that describes the update (the equivalent of the text entered with the command-line `git commit`), then press the `Commit and Push` button to do the commit and upload in one step.
 
 ## JabRef
 
@@ -157,7 +151,7 @@ JabRef is a java-based program, so there are several ways to run it, either from
 
 ### Install and run JabRef locally
 
-1. Download the latest version from http://jabref.sourceforge.net
+1. Download the latest version from [jabref.sourceforge.net](http://jabref.sourceforge.net)
 2. From the command-line, run:
 
 ```
@@ -168,7 +162,7 @@ This should run automatically. For information on the version of Java installed,
 
 ### Launch JabRef from the web browser
 
-On the main JabRef page at http://jabref.sourceforge.net, click the button marked "Web Start, run JabRef instantly", which will then start the (second most recent) version. You *must* give the application full access to your machine in order for it to work.
+On the main [JabRef page](http://jabref.sourceforge.net), click the button marked "Web Start, run JabRef instantly", which will then start the (second most recent) version. You *must* give the application full access to your machine in order for it to work.
 
 Once launched and a BibTeX file is opened, you get a list of all of the records, which can then be edited by double-clicking. There are several tabs that then open up, so you can either edit the appropriate `Required Fields`, or get the direct text listing in the tab marked `BibTeX source`.
 
@@ -176,7 +170,7 @@ Once launched and a BibTeX file is opened, you get a list of all of the records,
 
 What is truly useful about JabRef is the ability to auto-import complete references from various sources:
 
-1. Click on Search->Web search to bring up a new tab on the left, 
+1. Click on `Search->Web` search to bring up a new tab on the left, 
 2. There is a drop-down box marked `ACM Portal`. Clicking on this brings up a list of sources from which to import data. Select 'DOI to BibTeX'.
 3. From a paper, web page, etc. type or paste the DOI number into the white box, and press Fetch. That brings up a new dialog with the paper, which you then click to import. Do the same thing for ISBN number or other search information.
 
