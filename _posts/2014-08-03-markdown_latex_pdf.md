@@ -23,11 +23,11 @@ Here I will describe a number of different approaches, again using all open-sour
 
 4. Convert Markdown to LaTeX, then assemble the LaTeX files with the existing toolset (Eclipse, git, TexLive) and build the PDF
 
-Some of these appeared promising initially, but didn't quite pan out; I will briefly describe the problems and their causes, then move onto the tools that have worked successfully, often impressively so. For these, I will give example code where relevant, as well as instructions on how to set up these tools, assuming a system setup following the procedures for [Linux, LaTeX and git]({% post_url 2014-08-01-linux_latex %}) and [Jekyll and Ruby]({% post_url 2014-08-02-markdown_html %}). 
+Some of these appeared promising initially, but didn't quite pan out; I will briefly describe the problems and their causes, then move onto the tools that have worked successfully, often impressively so. I will show the conversions with the different tools of [the post on the sample layout]({% post_url 2014-03-06-ace_m2_sample_layout %}), which has sections, images and a table of images, to illustrate differences in generated output. I will give some example code where relevant, as well as some comments on how to set up these tools (good documentation is generally easily found with google), assuming a system setup following the procedures for [Linux, LaTeX and git]({% post_url 2014-08-01-linux_latex %}) and [Jekyll and Ruby]({% post_url 2014-08-02-markdown_html %}). 
 
 ## Jekyll plugin from Markdown to PDF via Pandoc LaTeX
 
-What appeared easiest was to install an existing Jekyll plugin designed to convert entire websites to PDF. The static site generator calls `Pandoc`, perhaps the best-known and most widely-used markup text converter, which can read / write many different formats. The plugin is even featured on the Jekyll webpage, and is called [`jekyll-pandoc-multiple-formats`](https://github.com/fauno/jekyll-pandoc-multiple-formats). The installation is pretty trivial with `gem` and `bundle`, and involves just a few slight changes to the website's configuration files.
+What appeared easiest was to install an existing Jekyll plugin designed to convert entire websites to PDF. The static site generator calls [`Pandoc`](http://johnmacfarlane.net/pandoc/), perhaps the best-known and most widely-used markup text converter, which can read / write many different formats. The plugin is even featured on the Jekyll webpage, and is called [`jekyll-pandoc-multiple-formats`](https://github.com/fauno/jekyll-pandoc-multiple-formats). The installation is pretty trivial with `gem` and `bundle`, and involves just a few slight changes to the website's configuration files.
 
 The plugin is installed in the `Gemfile`:
 
@@ -57,7 +57,8 @@ pandoc:
   flags: '--smart'
   site_flags: 
   outputs:
-    pdf: '--latex-engine=pdflatex --toc --include-in-header=./_includes/latex_header.tex  -V geometry:margin=1in -V header'
+    pdf: '--latex-engine=pdflatex --toc --include-in-header=./_includes/latex_header.tex  
+	 -V geometry:margin=1in -V header'
     epub:
     markdown: 
 ```
@@ -108,26 +109,40 @@ On a positive note, the `-y` option allows `gimli` to account properly for the Y
 
 ## Direct html5 to PDF conversion without LaTeX
 
-A better approach for representing the webpage is to let Kramdown handle the Markdown to html5 conversion, implementing first the liquid tags and css, then convert to PDF.
+A better approach for representing the webpage is to let Kramdown handle the Markdown to html5 conversion, implementing first the liquid tags and css, then convert to PDF. One major advantage is that the input is just a URL, which can even be the publicly-accessible one, since that already has all of the images and tables. Thus, generating a PDF does not require access to the markdown source (this is mostly a matter of convenience, because everything on this website is in a public repository, so the direct URL input just saves a few steps). 
 
-### PanDoc html5 to PDF
+### [`Pandoc`](http://johnmacfarlane.net/pandoc/) html5 to PDF
+
+[`Pandoc`](http://johnmacfarlane.net/pandoc/) has direct conversion of an html URL to PDF, and uses an intermediate LaTeX file, as is clear from the [generated PDF file](/images/2014_08_03_site_pdfs/pandoc_html_sample_layout.pdf). Arguments to the LaTeX compiler can be passed to Pandoc, providing control over selecting which LaTeX engine, basic page format control, and the ability to add LaTeX commands (i.e. for packages):
 
 ```
 pandoc --smart http://peterlu.github.io/2014/03/06/ace_m2_sample_layout.html 
---latex-engine=pdflatex --toc --include-in-header=./_includes/latex_header.tex 
--V geometry:margin=1in -o pandoc_html_ace_m2_sample_layout.pdf
+	--latex-engine=pdflatex --toc --include-in-header=./_includes/latex_header.tex 
+	-V geometry:margin=1in -o pandoc_html_sample_layout.pdf
 ```
 
-### wkhtmltopdf
+To demonstrate the basic capability, I created a `latex_header.tex` file with some basic packages for font management:
+
+```
+\usepackage{fourier,sourcesanspro,graphicx,listings,xcolor}
+```
+
+Overall, this works better than Pandoc's direct markdown-to-pdf conversion, as the Liquid tags have been properly implemented and the images linked, all by the markdown processor (Kramdown) that is set up with github and locally. The PDF is quite reasonable, with a proper LaTeX implementation of all of the major features: tables, images, auto-generated table of contents. If you want a quick way to get a LaTeX-generated representation of a web page *without editability*, then this is a great way to do it. The problem is that, for example if I want to combine the LaTeX source files of several pages into one document, I can't do it with this approach, since the LaTeX is already compiled and a PDF generated. Obviously this is not a bug or missing feature in Pandoc, but better seen as a tradeoff for the convenience of making a PDF in one step.
+
+### [`wkhtmltopdf`](http://wkhtmltopdf.org/)
+
+Pandoc goes through a LaTeX intermediate, but is not always desirable. Several other tools exist to do the webpage conversion directly to PDF (much as `markdown-pdf` does from markdown source) from html 5 + css. Again, the advantages are being able to have a separate markdown processor do the conversion with the liquid tags and image imposition. One popular tool is `wkhtmltopdf`(http://wkhtmltopdf.org/) (perhaps better parsed as wh-html-to-pdf), which is a simple library based on `WebKit` (the rendering engine in `Chrome` and other browsers). The command-line program takes a number of arguments to control layout, margins and can autogenerate headers and footers with various information:
 
 ```
 wkhtmltopdf --page-size Letter 
---footer-left [title] --footer-right [webpage] --footer-font-size 8 --footer-line 
---margin-top 30 --margin-left 25 --margin-right 25 --margin-bottom 15 
-http://peterlu.github.io/2014/03/06/ace_m2_sample_layout.html wkhtmltopdf_sample_layout.pdf
+	--footer-left [title] --footer-right [webpage] --footer-font-size 8 --footer-line 
+	--margin-top 30 --margin-left 25 --margin-right 25 --margin-bottom 15 
+	http://peterlu.github.io/2014/03/06/ace_m2_sample_layout.html wkhtmltopdf_sample_layout.pdf
 ```
 
-## Mark LaTeX conversion
+Of all of the programs, `wkhtmltopdf` does the best job of faithfully reproducing the original format---including the fonts---of the [original web page]({% post_url 2014-03-06-ace_m2_sample_layout %}), as seen in the [generated PDF file](/images/2014_08_03_site_pdfs/wkhtmltopdf_sample_layout.pdf). I therefore generate a PDF of each webpage, and then use Adobe Acrobat in Windows 7 (admittedly not free) to concatenate into a single PDF that represents the entire website.
+
+## Generating LaTeX from the Markdown source for manual integration
 
 ### Kramdown: Markdown to LaTeX
 
