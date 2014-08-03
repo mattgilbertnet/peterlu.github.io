@@ -86,9 +86,9 @@ sudo chmod 777 /opt/eclipse
 
 LaTeX integration for Eclipse, which controls the document build process. When you modify any file and save it, Eclipse will automatically execute the right programs to rebuild the document. To install in Eclipse:
 
-1. ```help->install``` new software, with path ```http://texlipse.sourceforge.net```
+1. `help->install` new software, with path `http://texlipse.sourceforge.net`
 
-2. ```Window->Preferences->Texlipse->Builder Settings```, set path: ```/usr/local/texlive/2014/bin/x86_64-linux```
+2. `Window->Preferences->Texlipse->Builder Settings`, set path: `/usr/local/texlive/2014/bin/x86_64-linux`
 
 ## Git
 
@@ -171,7 +171,7 @@ Once launched and a BibTeX file is opened, you get a list of all of the records,
 What is truly useful about JabRef is the ability to auto-import complete references from various sources:
 
 1. Click on `Search->Web` search to bring up a new tab on the left, 
-2. There is a drop-down box marked `ACM Portal`. Clicking on this brings up a list of sources from which to import data. Select 'DOI to BibTeX'.
+2. There is a drop-down box marked `ACM Portal`. Clicking on this brings up a list of sources from which to import data. Select `DOI to BibTeX`.
 3. From a paper, web page, etc. type or paste the DOI number into the white box, and press Fetch. That brings up a new dialog with the paper, which you then click to import. Do the same thing for ISBN number or other search information.
 
 This automatically adds a completed reference to the list, but usually requires some modification:
