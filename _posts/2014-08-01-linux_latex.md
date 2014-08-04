@@ -23,10 +23,9 @@ Most open-source tools are designed to work with Linux first and foremost, usual
 
 Based on Ubuntu 14.04 LTS, but with fewer kernel updates; XFCE desktop is fast, easy to use, and widespread. Either bare-metal install or virtual machine (e.g. VirtualBox) is fine for this demo.
 
-1. Download `.iso` or `.usb` from [www.linuxmint.com/download.php](http://www.linuxmint.com/download.php)
-2. Make bootable DVD / USB stick; in Linux, there is a program called `Startup Disk Creator`. 
-
-2. Run updates and restart.
+1. Download `.iso` or `.usb` from <www.linuxmint.com/download.php>
+2. Make bootable DVD / USB stick; in Linux, use the program called `Startup Disk Creator`. 
+3. Run updates and restart.
 
 ### Synaptic package manager
 
@@ -44,15 +43,15 @@ Everyone should use LaTeX for all scientific and technical publications. It is t
 
 This is a large, modern, updated and full-featured distribution, with a great deal of flexibility. Although you can install it through Synaptic, for some reason the packages that Ubuntu releases are always way, way out of date. Instead:
 
-1. Download the latest from [tug.org/texlive](http://tug.org/texlive/)
+1. Download the latest from <http://tug.org/texlive/>
 2. Extract the archive, either using the desktop or command-line. 
 3. Run the installation script with root permissions:
 
-```
+~~~
 sudo ./install_tl
-```
+~~~
 
-This launches the text-based installer. A good minimum installation (about 700 MB) uses the **scheme-basic** scheme, letter size instead of A4, and adds the following packages:
+This launches the text-based installer. A good minimum installation (about 700 MB) uses the `scheme-basic` scheme, letter size instead of A4, and adds the following packages:
 
 + recommended fonts
 + Latex recommended packages
@@ -65,28 +64,28 @@ The installer will download all of the packages you specify, so you must be onli
 
 4. After installation completes, add the RevTeX-4.1 packages for _Physical Review_ journals.
 
-```
+~~~
 /usr/local/texlive/2014/bin/x86_64-linux $ sudo ./tlmgr install revtex
-```
+~~~
 
 ## Eclipse
 
 Eclipse is a large software integrated development environment (IDE), open-sourced by IBM. Current version is Eclipse 4.4 "Luna". To install:
 
-1. download from [eclipse.org](http://eclipse.org/downloads/) 
+1. download from <http://eclipse.org/downloads/>
 2. extract archive, which places all files in single folder
 3. for convenience, move to a system directory
 
-```
+~~~
 sudo mv eclipse /opt/
 sudo chmod 777 /opt/eclipse
-```
+~~~
 
 ### Texlipse
 
 LaTeX integration for Eclipse, which controls the document build process. When you modify any file and save it, Eclipse will automatically execute the right programs to rebuild the document. To install in Eclipse:
 
-1. `help->install` new software, with path `http://texlipse.sourceforge.net`
+1. `help->install` new software, with path <http://texlipse.sourceforge.net>
 
 2. `Window->Preferences->Texlipse->Builder Settings`, set path: `/usr/local/texlive/2014/bin/x86_64-linux`
 
@@ -96,32 +95,32 @@ Git is the version-control system used to manage the Linux kernel, and was writt
 
 ### Configure git for first usage
 
-```
+~~~
 git config --global user.name "Peter J. Lu"
 git config --global user.email plu@fas.harvard.edu
-```
+~~~
 
 ### SSH keys 
 In order to manage identities and security, git (like many modern Linux tools) requires authentication, and does so via SSH keys. This will allow modifications from your machine to change a remote repository in the cloud, and replaces login credentials. To generate the SSH keys to allow you to `push` to remote git repository:
 
-```
+~~~
 ssh-keygen -t rsa -C "plu@fas.harvard.edu"
-```
+~~~
 
 You will be prompted for a passphrase, the password that you will use to unlock this key every time you want to use it.
 
 ### Add SSH key to bitbucket.org repository 
 
-1. login to [bitbucket.org](https://www.bitbucket.org)
+1. login to <http://www.bitbucket.org>
 2. In upper right corner, drop down `manage account`, SSH keys option on left: add text from id_rsa.pub
 
 ## Working with Git, Eclipse and LaTeX
 
 The first step is to clone a repository from the remote location to the local machine and then import into a new Eclipse project. In the workspace directory (typically `~/workspace`):
 
-```
+~~~
 git clone git@bitbucket.org:peterjlu/aot_xl.git
-````
+~~~
 
 In Eclipse: `file->import->general->existing projects into workspace`
 
@@ -129,13 +128,13 @@ This will create a new project that Eclipse is aware has a remote git-repository
 
 ### Updating a git repository: command-line
 
-```
+~~~
 git add -A
 git commit -m 'name of update'
 git push
-```
+~~~
 
-You will be prompted for the passphrase; once you enter it successfully, it automatically uploads and updates the remote repository. To confirm this, you can check online at [bitbucket](http://www.bitbucket.org).
+You will be prompted for the passphrase; once you enter it successfully, it automatically uploads and updates the remote repository. To confirm this, you can check online at <http://www.bitbucket.org>.
 
 ### Updating a git repository: inside Eclipse
 
@@ -151,18 +150,18 @@ JabRef is a java-based program, so there are several ways to run it, either from
 
 ### Install and run JabRef locally
 
-1. Download the latest version from [jabref.sourceforge.net](http://jabref.sourceforge.net)
+1. Download the latest version from <http://jabref.sourceforge.net>
 2. From the command-line, run:
 
-```
+~~~
 java -jar JabRef-2.10.jar
-```
+~~~
 
 This should run automatically. For information on the version of Java installed, run `java -version`, and if that doesn't work, check the directory `/usr/bin/java` to see if the program is installed. Otherwise, use Synaptic to install it.
 
 ### Launch JabRef from the web browser
 
-On the main [JabRef page](http://jabref.sourceforge.net), click the button marked "Web Start, run JabRef instantly", which will then start the (second most recent) version. You *must* give the application full access to your machine in order for it to work.
+From <http://jabref.sourceforge.net>, click the button marked "Web Start, run JabRef instantly", which will then start the (second most recent) version. You *must* give the application full access to your machine in order for it to work.
 
 Once launched and a BibTeX file is opened, you get a list of all of the records, which can then be edited by double-clicking. There are several tabs that then open up, so you can either edit the appropriate `Required Fields`, or get the direct text listing in the tab marked `BibTeX source`.
 
