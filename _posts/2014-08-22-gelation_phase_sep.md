@@ -38,7 +38,7 @@ This movie has three images, collected 60 microns in from the cover slip, from c
 
 We also launched a sample, [number 21]({% post_url 2014-03-05-ace_m2_samples %}), (platter 2105, strip E-618, well 5), that we observed on earth to undergo equilibrium phase separation, ultimately to completion. That is, we did not see the arrest of the structure that we do in the sample that gels. These two samples use the same particles in roughly the same concentration, and the only difference is the polymer concentration, which is higher in the one that gels. On orbit, we see a slow evolution of phase separation, a coarsening that we observe in BCAT, but on a much smaller leength scale:
 
-![sample 22 gel](/images/2014_08_22_gelation_phase_sep/p5e5s21_40x_z060_xyk_2wks_sm.gif)
+![sample 21 phase separation](/images/2014_08_22_gelation_phase_sep/p5e5s21_40x_z060_xyk_2wks_sm.gif)
 
 ![](/images/ace_m2_sample_tiles/sample21.png)
 
