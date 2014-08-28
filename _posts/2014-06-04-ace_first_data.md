@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-06-04 0:15:30 UTC
 title: First images of ACE-M2 samples
 ---

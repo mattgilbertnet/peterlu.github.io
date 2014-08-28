@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-07-14 0:15:30 UTC
 title: ACE-M2 run 4, first phase-separation images
 ---

@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: true
 date: 2014-08-03 0:00:00 UTC
 title: Converting the website to documents
 ---

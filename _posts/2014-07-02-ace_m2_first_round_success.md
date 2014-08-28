@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-07-02 0:00:00 UTC
 title: ACE-M2 runs 1 and 2 success summary
 ---

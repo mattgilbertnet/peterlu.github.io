@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: true
 date: 2014-03-05 0:00:00 UTC
 title: Samples for the second ACE experiment, ACE-M2
 ---

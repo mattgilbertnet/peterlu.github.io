@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-06-04 0:13:00 UTC
 title: ACE-M2 starting operations
 ---

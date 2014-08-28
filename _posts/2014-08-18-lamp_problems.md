@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: true
 date: 2014-08-18 0:00:00 UTC
 title: On-orbit challenges, broken LMM lamp
 ---

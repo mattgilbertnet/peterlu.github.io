@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-08-22 0:15:30 UTC
 title: Significant science, gelation and phase separation
 ---

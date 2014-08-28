@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-07-15 0:15:30 UTC
 title: Why is it taking so long to post data? Data organization
 ---

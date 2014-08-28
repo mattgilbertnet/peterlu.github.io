@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: true
 date: 2014-08-02 0:00:00 UTC
 title: Building a website from a few dozen lines of code
 ---

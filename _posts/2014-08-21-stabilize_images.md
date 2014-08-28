@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: false
 date: 2014-08-21 0:15:30 UTC
 title: Image stabilization and filtering
 ---

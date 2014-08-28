@@ -1,6 +1,5 @@
 ---
 layout: post
-disqus_comments: true
 date: 2014-04-18 0:00:00 UTC
 title: ACE-M2 launched into space
 ---
