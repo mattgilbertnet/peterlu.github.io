@@ -16,11 +16,11 @@ Another major benefit of the current paradigm of on-orbit operations is the abil
 
 ## BCAT-KP and ACE-M2: the same colloid-polymer sample
 
-As a result of these factors, we have been able to launch and observe the behavior of a phase-separating colloid-polymer mixture, [sample number 20]({% post_url 2014-03-05-ace_m2_samples %}), (platter 2104, strip A-612, well 5):
+As a result of these factors, we have been able to launch and observe the behavior of a phase-separating colloid-polymer mixture, [sample number 20]({% post_url 2014-03-05-ace_m2_samples %}), (platter 2104, strip A-612, well A5):
 
 ![](/images/ace_m2_sample_tiles/sample20.png)
 
-(We launched the sample sample in platter 2104, strip C-621, well 5, but it has a slowly growing bubble, and thus the sample data is not valid, which will be discussed elsewhere).
+_We launched the same sample 20 in another well (platter 2104, strip C-621, well C5), but that well has a slowly growing bubble, and thus the sample data is not valid, which will be discussed elsewhere_.
 
 ### The original experiment: 2.5-week run
 
